@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: local
+
+server:
+  tomcat:
+    accesslog:
+      enabled: true
+      max-days: 3
+      pattern: combined
+      directory: log
+    basedir: ./tomcat
+    threads:
+      max: 512
+      min-spare: 32
+    max-http-form-post-size: 1048576
